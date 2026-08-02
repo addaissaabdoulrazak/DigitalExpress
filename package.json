@@ -27,12 +27,12 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.0",
-    "@angular/build": "^19.2.27",
+    "@angular/build": "^19.2.0",
     "@angular/cli": "^19.2.0",
     "@angular/compiler-cli": "^19.2.0",
-    "@babel/runtime": "^8.0.0",
-    "autoprefixer": "^10.5.4",
-    "postcss": "^8.5.25",
+    "@babel/runtime": "^7.26.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.5.0",
     "tailwindcss": "^3.4.19",
     "typescript": "~5.7.0"
   }
