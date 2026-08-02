@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist/digital-express"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
