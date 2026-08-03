@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-footer',
   standalone: true,
   template: `
-    <footer class="bg-[#0D47A1] text-white py-10">
+    <footer class="bg-[#1F2933] text-white py-10">
       <div class="container-custom">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
           <!-- Logo -->
@@ -29,9 +29,9 @@ import { Component } from '@angular/core';
 
           <!-- Links -->
           <div class="flex items-center gap-6 text-sm">
-            <a href="#" class="text-white/60 hover:text-white transition-colors duration-300">Mentions légales</a>
-            <a href="#" class="text-white/60 hover:text-white transition-colors duration-300">Politique de confidentialité</a>
-            <a href="#" class="text-white/60 hover:text-white transition-colors duration-300">CGV</a>
+            <a href="#" class="text-white/60 hover:text-[#D66610] transition-colors duration-300">Mentions légales</a>
+            <a href="#" class="text-white/60 hover:text-[#D66610] transition-colors duration-300">Politique de confidentialité</a>
+            <a href="#" class="text-white/60 hover:text-[#D66610] transition-colors duration-300">CGV</a>
           </div>
         </div>
       </div>

@@ -13,8 +13,12 @@ interface Service {
   standalone: true,
   imports: [CommonModule, SvgIconComponent],
   template: `
-    <section id="services" class="py-20 bg-gray-light">
-      <div class="container-custom">
+    <section id="services" class="py-20 bg-gray-light relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+
+      <div class="container-custom relative z-10">
         <!-- Section Header -->
         <div class="text-center mb-16 fade-up">
           <h2 class="text-3xl lg:text-4xl font-extrabold text-dark mb-4">
@@ -29,13 +33,13 @@ interface Service {
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           @for (service of services; track service.title; let i = $index) {
             <div
-              class="fade-up bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-50"
+              class="fade-up bg-surface rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border group"
               [style.transition-delay]="i * 100 + 'ms'"
             >
               <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
                 <app-svg-icon [name]="service.icon" className="text-primary" [size]="28"></app-svg-icon>
               </div>
-              <h3 class="text-xl font-bold text-dark mb-3">{{ service.title }}</h3>
+              <h3 class="text-xl font-bold text-dark mb-3 group-hover:text-primary transition-colors duration-300">{{ service.title }}</h3>
               <p class="text-gray-text leading-relaxed">{{ service.description }}</p>
             </div>
           }

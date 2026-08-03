@@ -7,7 +7,7 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
   standalone: true,
   imports: [FormsModule, SvgIconComponent],
   template: `
-    <section id="contact" class="py-20 bg-primary relative overflow-hidden">
+    <section id="contact" class="py-20 bg-gray-light relative overflow-hidden">
       <!-- Background decoration -->
       <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-white/3 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
       <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-white/3 rounded-full translate-x-1/3 translate-y-1/3"></div>
@@ -99,7 +99,7 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
             </div>
 
             <!-- Form -->
-            <div class="bg-white rounded-2xl p-8 shadow-2xl">
+            <div class="bg-[#273549] rounded-2xl p-8 shadow-2xl">
               <h3 class="text-xl font-bold text-dark mb-6">Envoyez-nous un message</h3>
               <form (ngSubmit)="onSubmit()" class="space-y-5">
                 <div>
@@ -109,7 +109,7 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
                     [(ngModel)]="formData.name"
                     name="name"
                     placeholder="Votre nom"
-                    class="w-full px-4 py-3 bg-gray-light border border-gray-200 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-300 text-dark placeholder:text-gray-400"
+                    class="w-full px-4 py-3 bg-gray-800 border border-border rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-300 text-white placeholder:text-gray-500"
                     required
                   />
                 </div>
@@ -120,7 +120,7 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
                     [(ngModel)]="formData.email"
                     name="email"
                     placeholder="votre@email.com"
-                    class="w-full px-4 py-3 bg-gray-light border border-gray-200 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-300 text-dark placeholder:text-gray-400"
+                    class="w-full px-4 py-3 bg-gray-800 border border-border rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-300 text-white placeholder:text-gray-500"
                     required
                   />
                 </div>
@@ -131,13 +131,13 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
                     name="message"
                     rows="4"
                     placeholder="Décrivez votre projet..."
-                    class="w-full px-4 py-3 bg-gray-light border border-gray-200 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-300 text-dark placeholder:text-gray-400 resize-none"
+                    class="w-full px-4 py-3 bg-gray-800 border border-border rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-300 text-white placeholder:text-gray-500 resize-none"
                     required
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  class="w-full flex items-center justify-center gap-2 bg-primary-dark text-white px-6 py-3.5 rounded-lg font-semibold text-sm hover:bg-[#0D47A1] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                  class="w-full flex items-center justify-center gap-2 bg-primary text-white px-6 py-3.5 rounded-lg font-semibold text-sm hover:bg-primary-dark transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                 >
                   ENVOYER LE MESSAGE
                   <app-svg-icon name="send" [size]="18"></app-svg-icon>

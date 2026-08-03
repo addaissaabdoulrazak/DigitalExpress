@@ -8,15 +8,13 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
   imports: [CommonModule, SvgIconComponent],
   template: `
     <header
-      class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-300"
+      class="fixed top-0 left-0 right-0 z-50 bg-surface shadow-sm transition-all duration-300"
       [class.shadow-md]="scrolled"
     >
       <div class="container-custom flex items-center justify-between h-20">
         <!-- Logo -->
         <a href="#" class="flex items-center gap-2 no-underline">
-          <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <app-svg-icon name="globe" [size]="24" className="text-white"></app-svg-icon>
-          </div>
+          <img src="assets/images/logo1.png" alt="Digital Express" class="h-12 w-auto" />
           <div class="flex flex-col leading-tight">
             <span class="text-primary font-extrabold text-base tracking-wide">DIGITAL</span>
             <span class="text-primary font-extrabold text-base tracking-wide">EXPRESS</span>
@@ -30,7 +28,7 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
               [href]="item.link"
               class="relative text-[15px] font-medium transition-colors duration-300 py-1"
               [class.text-primary]="item.active"
-              [class.text-gray-text]="!item.active"
+              [class.text-gray-400]="!item.active"
               [class.hover:text-primary]="!item.active"
             >
               {{ item.label }}
@@ -58,7 +56,7 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
 
       <!-- Mobile Menu -->
       @if (mobileMenuOpen) {
-        <div class="lg:hidden bg-white border-t border-gray-100 shadow-lg">
+        <div class="lg:hidden bg-surface border-t border-border shadow-lg">
           <nav class="flex flex-col py-4 px-6 gap-3">
             @for (item of menuItems; track item.label) {
               <a

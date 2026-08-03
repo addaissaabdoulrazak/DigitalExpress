@@ -14,7 +14,7 @@ interface Project {
   standalone: true,
   imports: [CommonModule, SvgIconComponent],
   template: `
-    <section id="portfolio" class="py-20 bg-white">
+    <section id="portfolio" class="py-20 bg-surface">
       <div class="container-custom">
         <!-- Section Header -->
         <div class="text-center mb-16 fade-up">
@@ -30,7 +30,7 @@ interface Project {
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mb-12">
           @for (project of projects; track project.title; let i = $index) {
             <div
-              class="fade-up group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-50 cursor-pointer"
+              class="fade-up group bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border cursor-pointer"
               [style.transition-delay]="i * 100 + 'ms'"
             >
               <!-- Project Image Placeholder -->
@@ -74,31 +74,31 @@ export class PortfolioComponent {
     {
       title: 'Marché Express',
       category: 'Application Mobile',
-      imageColor: 'linear-gradient(135deg, #1976D2, #42A5F5)',
+      imageColor: 'linear-gradient(135deg, #D66610, #EA8C43)',
       icon: 'shopping-cart',
     },
     {
       title: 'Site E-commerce',
       category: 'Développement Web',
-      imageColor: 'linear-gradient(135deg, #1565C0, #1E88E5)',
+      imageColor: 'linear-gradient(135deg, #C25A0E, #D66610)',
       icon: 'shopping-bag',
     },
     {
       title: 'Portfolio Entreprise',
       category: 'Design & Web',
-      imageColor: 'linear-gradient(135deg, #0D47A1, #1976D2)',
+      imageColor: 'linear-gradient(135deg, #A9520A, #D66610)',
       icon: 'briefcase',
     },
     {
       title: 'Identité Visuelle',
       category: 'Design Graphique',
-      imageColor: 'linear-gradient(135deg, #1976D2, #64B5F6)',
+      imageColor: 'linear-gradient(135deg, #D66610, #EA8C43)',
       icon: 'palette',
     },
     {
       title: 'Affiches Publicitaires',
       category: 'Impression',
-      imageColor: 'linear-gradient(135deg, #1565C0, #42A5F5)',
+      imageColor: 'linear-gradient(135deg, #C25A0E, #EA8C43)',
       icon: 'image',
     },
   ];

@@ -12,7 +12,7 @@ interface Step {
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-surface">
       <div class="container-custom">
         <!-- Section Header -->
         <div class="text-center mb-20 fade-up">
