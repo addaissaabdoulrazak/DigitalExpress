@@ -28,7 +28,7 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
               [href]="item.link"
               class="relative text-[15px] font-medium transition-colors duration-300 py-1"
               [class.text-primary]="item.active"
-              [class.text-gray-400]="!item.active"
+              [class.text-dark]="!item.active"
               [class.hover:text-primary]="!item.active"
             >
               {{ item.label }}
@@ -63,7 +63,7 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
                 [href]="item.link"
                 class="text-[15px] font-medium py-2 transition-colors duration-300"
                 [class.text-primary]="item.active"
-                [class.text-gray-text]="!item.active"
+                [class.text-gray-400]="!item.active"
                 [class.hover:text-primary]="!item.active"
                 (click)="mobileMenuOpen = false"
               >

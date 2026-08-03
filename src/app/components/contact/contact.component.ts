@@ -99,7 +99,7 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
             </div>
 
             <!-- Form -->
-            <div class="bg-[#273549] rounded-2xl p-8 shadow-2xl">
+            <div class="bg-surface-elevated rounded-2xl p-8 shadow-2xl">
               <h3 class="text-xl font-bold text-dark mb-6">Envoyez-nous un message</h3>
               <form (ngSubmit)="onSubmit()" class="space-y-5">
                 <div>

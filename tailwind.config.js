@@ -15,7 +15,9 @@ module.exports = {
         dark: '#FFFFFF',
         surface: '#1F2933',
         'surface-elevated': '#273549',
+        'surface-soft': '#1a1f2e',
         border: '#374151',
+        'footer-dark': '#111827',
       },
       fontFamily: {
         sans: ['Poppins', 'Montserrat', 'Inter', 'sans-serif'],

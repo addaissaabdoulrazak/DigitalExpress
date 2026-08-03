@@ -37,7 +37,7 @@ interface Stat {
               <div class="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <app-svg-icon name="check-circle" [size]="26"></app-svg-icon>
               </div>
-              <div class="text-3xl font-extrabold mb-1">+100</div>
+              <div class="text-3xl font-extrabold mb-1 text-primary">+100</div>
               <div class="text-white/70 text-sm leading-tight">Projets<br />réalisés</div>
             </div>
 
@@ -46,7 +46,7 @@ interface Stat {
               <div class="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <app-svg-icon name="clock" [size]="26"></app-svg-icon>
               </div>
-              <div class="text-3xl font-extrabold mb-1">100%</div>
+              <div class="text-3xl font-extrabold mb-1 text-primary">100%</div>
               <div class="text-white/70 text-sm leading-tight">Respect<br />des délais</div>
             </div>
 
@@ -55,7 +55,7 @@ interface Stat {
               <div class="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <app-svg-icon name="users" [size]="26"></app-svg-icon>
               </div>
-              <div class="text-lg font-extrabold mb-1 leading-tight">Équipe</div>
+              <div class="text-lg font-extrabold mb-1 leading-tight text-primary">Équipe</div>
               <div class="text-white/70 text-sm leading-tight mb-2">Niger & Canada</div>
               <!-- Flags -->
               <div class="flex items-center justify-center gap-2">
@@ -83,7 +83,7 @@ interface Stat {
               <div class="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <app-svg-icon name="headphones" [size]="26"></app-svg-icon>
               </div>
-              <div class="text-3xl font-extrabold mb-1">24/7</div>
+              <div class="text-3xl font-extrabold mb-1 text-primary">24/7</div>
               <div class="text-white/70 text-sm leading-tight">Support<br />client</div>
             </div>
           </div>
