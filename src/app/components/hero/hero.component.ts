@@ -6,8 +6,10 @@ import { SvgIconComponent } from '../svg-icon/svg-icon.component';
   standalone: true,
   imports: [SvgIconComponent],
   template: `
-    <section id="hero" class="pt-28 pb-16 lg:pt-32 lg:pb-24 bg-surface overflow-hidden">
-      <div class="container-custom">
+    <section id="hero" class="pt-28 pb-16 lg:pt-32 lg:pb-24 bg-surface overflow-hidden relative" style="background-image: url('assets/images/Acceuil.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Overlay pour garder le texte lisible -->
+      <div class="absolute inset-0 bg-surface/80"></div>
+      <div class="container-custom relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           <!-- Left Column -->
           <div class="fade-up order-2 lg:order-1">
