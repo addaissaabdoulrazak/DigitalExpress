@@ -26,26 +26,28 @@ interface Step {
 
         <!-- Timeline -->
         <div class="fade-up relative">
-          <!-- Horizontal line -->
+          <!-- Horizontal line (desktop only) -->
           <div class="hidden lg:block absolute top-10 left-[8%] right-[8%] h-0.5 bg-primary/20"></div>
 
-          <!-- Steps Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-4">
+          <!-- Steps -->
+          <div class="flex flex-col gap-0 lg:grid lg:grid-cols-6 lg:gap-4">
             @for (step of steps; track step.number; let i = $index) {
-              <div class="relative flex flex-col items-center text-center group">
+              <div class="relative flex lg:flex-col lg:items-center lg:text-center group">
+                <!-- Vertical connector line (mobile only) -->
+                @if (i < steps.length - 1) {
+                  <div class="lg:hidden absolute left-[25px] top-[60px] w-0.5 bg-primary/20" style="height: calc(100% - 40px);"></div>
+                }
+
                 <!-- Circle with number -->
-                <div class="relative z-10 w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white font-extrabold text-2xl mb-5 shadow-lg shadow-primary/25 group-hover:scale-110 transition-transform duration-300">
+                <div class="relative z-10 w-[50px] h-[50px] lg:w-20 lg:h-20 bg-primary rounded-full flex items-center justify-center text-white font-extrabold text-xl lg:text-2xl flex-shrink-0 shadow-lg shadow-primary/25 group-hover:scale-110 transition-transform duration-300 lg:mb-5">
                   {{ step.number }}
                 </div>
 
                 <!-- Content -->
-                <h3 class="text-lg font-bold text-dark mb-2">{{ step.title }}</h3>
-                <p class="text-gray-text text-sm leading-relaxed max-w-[180px]">{{ step.description }}</p>
-
-                <!-- Connector line for mobile -->
-                @if (i < steps.length - 1) {
-                  <div class="lg:hidden absolute top-10 left-1/2 h-full w-0.5 bg-primary/20 -z-10"></div>
-                }
+                <div class="ml-5 lg:ml-0 pb-10 lg:pb-0">
+                  <h3 class="text-lg font-bold text-dark mb-1 lg:mb-2">{{ step.title }}</h3>
+                  <p class="text-gray-text text-sm leading-relaxed lg:max-w-[180px]">{{ step.description }}</p>
+                </div>
               </div>
             }
           </div>
